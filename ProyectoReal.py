@@ -47,7 +47,7 @@ palabras_medio = ["fabulas", "corazon", "jabalis", "tenedor", "ubicada", "cuchar
 
 palabras_dificil = ["japones", "camaras", "ardilla", "biblias", "brillos", "anillos", "cubetas", "pulsera", "fabrica", "maracas", "granero", "objetos", "macabro", "abrazar", "aceites", "acabado", "adivino", "asiento", "maletas", "colibri"]
 
-print("Que nivel deseas jugar?? ٩(^‿^)۶")
+print("¿¿Que nivel deseas jugar amiguito?? ٩(^‿^)۶")
 print("""
 1. Facil
 2. Medio
@@ -95,7 +95,7 @@ if eleccion_nivel == "1":
             palabra_real = input("¿Que palabra has encontrado?: ")
 
             #Evaluamos las letras de la palabra
-            if palabra_real not in palabra_selec:
+            if palabra_real != palabra_selec:
                 intentos -= 1
                 print("Ufff has fallado amigo ᕙ ༼*◕_◕*༽ᕤ ")
                 print("Te quedan", +intentos, "intentos")
@@ -108,29 +108,28 @@ if eleccion_nivel == "1":
                     if palabra_selec [i] == palabra_real:
                         palabra_selec[i] = palabra_real
             
-                if palabra_real == palabra_selec:
-                    print("La palabra correcta es -", palabra_selec, "-", "꒰⑅•ᴗ•⑅꒱")
-                    sleep(5)
-                    clear()
-                    break
-                elif aciertos == 0:
-                    print("Has perdido !!")
-                    print("La palabra correcta era: ", palabra_selec, "(✖╭╮✖)")
-                sleep(4)
-                clear()
-
-                #Preguntamos al usuariosi desea continuar con el juego
-                pregunta = input("¿Deseas seguir jugando? si / no: ")
-                if pregunta == "si":
-                    print("Enhorabuena sigamos adivinando palabras ٩(^‿^)۶")
-                else:
-                    print("¡Ah que Sad! see you later (✖╭╮✖)")
-                sleep(4)
+                print("La palabra correcta es -", palabra_selec, "-", "꒰⑅•ᴗ•⑅꒱")
+                sleep(5)
                 clear()
                 break
+            if aciertos == 0:
+                print("Has perdido !!")
+                print("La palabra correcta era: ", palabra_selec, "(✖╭╮✖)")
+            sleep(4)
+            clear()
+
+        #Preguntamos al usuariosi desea continuar con el juego
+        pregunta = input("¿Deseas seguir jugando? si / no: ")
+        if pregunta == "si":
+            print("Enhorabuena sigamos adivinando palabras ٩(^‿^)۶")
+        else:
+            print("¡Ah que Sad! see you later (✖╭╮✖)")
+            sleep(4)
+            clear()
+            break
 
 #Nivel medio
-elif eleccion_nivel == "2":
+if eleccion_nivel == "2":
     print("Comencemos con el nivel medio (◍ •ᴗ•◍)❤")
     sleep(5)
     clear()
@@ -156,7 +155,7 @@ elif eleccion_nivel == "2":
             palabra_real = input("¿Que palabra has encontrado?:")
 
             #Evaluamos las letras de la palabra
-            if palabra_real not in palabra_selec:
+            if palabra_real != palabra_selec:
                 intentos -= 1
                 print("Ufff has fallado amigo ᕙ ༼*◕_◕*༽ᕤ ")
                 print("Te quedan", +intentos, "intentos")
@@ -169,30 +168,28 @@ elif eleccion_nivel == "2":
                     if palabra_selec[i] == palabra_real:
                         palabra_selec[i] = palabra_real
             
-                if palabra_real == palabra_selec:
-                    print("La palabra correcta es -", palabra_selec, "-")
-                    sleep(5)
-                    clear()
-                    break
-
-                elif aciertos == 0:
-                    print("Has perdido!!")
-                    print("La palabra correcta era ", palabra_selec)
-                sleep(4)
-                clear()
-
-                #Preguntamos al usuariosi desea continuar con el juego
-                pregunta = input("¿Deseas seguir jugando? si / no: ")
-                if pregunta == "si":
-                    print("Enhorabuena sigamos adivinando palabras ٩(^‿^)۶")
-                else:
-                    print("¡Ah que Sad! see you later (✖╭╮✖)")
-                sleep(4)
+                print("La palabra correcta es -", palabra_selec, "-", "꒰⑅•ᴗ•⑅꒱")
+                sleep(5)
                 clear()
                 break
+            if aciertos == 0:
+                print("Has perdido!!")
+                print("La palabra correcta era ", palabra_selec, "(✖╭╮✖)")
+            sleep(4)
+            clear()
+
+        #Preguntamos al usuario si desea continuar con el juego
+        pregunta = input("¿Deseas seguir jugando? si / no: ")
+        if pregunta == "si":
+            print("Enhorabuena sigamos adivinando palabras ٩(^‿^)۶")
+        else:
+            print("¡Ah que Sad! see you later (✖╭╮✖)")
+            sleep(4)
+            clear()
+            break
 
 #Nivel dificil
-elif eleccion_nivel == "3":
+if eleccion_nivel == "3":
     print("Comencemos con el nivel dificil (◍ •ᴗ•◍)❤")
     sleep(5)
     clear()
@@ -218,7 +215,7 @@ elif eleccion_nivel == "3":
             palabra_real = input("¿Que palabra has encontrado?:")
 
             #Evaluamos las letras de la palabra
-            if palabra_real not in palabra_selec:
+            if palabra_real != palabra_selec:
                 intentos -= 1
                 print("Ufff has fallado amigo ᕙ ༼*◕_◕*༽ᕤ ")
                 print("Te quedan", +intentos, "intentos")
@@ -231,24 +228,22 @@ elif eleccion_nivel == "3":
                     if palabra_selec[i] == palabra_real:
                         palabra_selec[i] = palabra_real
             
-                if palabra_real == palabra_selec:
-                    print("La palabra correcta es -", palabra_selec, "-")
-                    sleep(5)
-                    clear()
-                    break
-
-                elif aciertos == 0:
-                    print("Has perdido!!")
-                    print("La palabra correcta era ", palabra_selec)
-                sleep(4)
+                print("La palabra correcta es -", palabra_selec, "-", "꒰⑅•ᴗ•⑅꒱")
+                sleep(5)
                 clear()
+                break
+            if aciertos == 0:
+                print("Has perdido!!")
+                print("La palabra correcta era ", palabra_selec, "(✖╭╮✖)")
+            sleep(4)
+            clear()
 
-                #Preguntamos al usuariosi desea continuar con el juego
-                pregunta = input("¿Deseas seguir jugando? si / no: ")
-                if pregunta == "si":
-                    print("Enhorabuena sigamos adivinando palabras ٩(^‿^)۶")
-                else:
-                    print("¡Ah que Sad! see you later (✖╭╮✖)")    
-                sleep(2)
-                clear()  
-                break             
+        #Preguntamos al usuariosi desea continuar con el juego
+        pregunta = input("¿Deseas seguir jugando? si / no: ")
+        if pregunta == "si":
+            print("Enhorabuena sigamos adivinando palabras ٩(^‿^)۶")
+        else:
+            print("¡Ah que Sad! see you later (✖╭╮✖)")    
+            sleep(2)
+            clear()  
+            break             
